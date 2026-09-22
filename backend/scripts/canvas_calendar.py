@@ -38,6 +38,7 @@ def canvas_ics_parse(url: str) -> list[dict]:
                         if component.get("dtend") else None,
                     "location": component.get("location").strip()
                         if component.get("location") else None,
+                    "uid": str(component.get("uid")) if component.get("uid") else None,
                 }
             )
             # fmt: on
